@@ -9,6 +9,7 @@ import { Badge } from "../components/ui/badge";
 import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import profilePicture from "../../public/marta-profile.jpg";
+import { ScrollToTopButton } from "@/components/scroll-to-top-button";
 
 export default function Home() {
   return (
@@ -234,6 +235,7 @@ export default function Home() {
           </Card>
         </section>
       </div>
+      <ScrollToTopButton />
     </main>
   );
 }
