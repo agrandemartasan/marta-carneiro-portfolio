@@ -8,7 +8,7 @@ import {
 import { Badge } from "../components/ui/badge";
 import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
 import Image from "next/image";
-import profilePicture from "../public/images/marta-profile.jpg";
+import profilePicture from "../../public/marta-profile.jpg";
 
 export default function Home() {
   return (
