@@ -13,13 +13,13 @@ import { ScrollToTopButton } from "@/components/scroll-to-top-button";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-background text-foreground">
+    <main className="flex min-h-screen flex-col items-center justify-between p-4 sm:p-8 md:p-24 bg-background text-foreground">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm">
         <section
           id="hero"
           className="flex flex-col items-center justify-center min-h-screen text-center"
         >
-          <div className="w-48 h-48 mb-8 relative overflow-hidden rounded-full border-4 border-primary">
+          <div className="w-32 h-32 sm:w-48 sm:h-48 mb-4 sm:mb-8 relative overflow-hidden rounded-full border-4 border-primary">
             <Image
               src={profilePicture}
               alt="Marta Carneiro"
@@ -29,10 +29,10 @@ export default function Home() {
               priority
             />
           </div>
-          <h1 className="text-4xl font-bold mb-4 gradient-text">
+          <h1 className="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4 gradient-text">
             Marta Carneiro
           </h1>
-          <p className="text-xl mb-8 text-secondary-foreground">
+          <p className="text-lg sm:text-xl mb-4 sm:mb-8 text-secondary-foreground">
             Web Developer | Anime Enthusiast | Gamer
           </p>
           <div className="flex space-x-4">
@@ -65,8 +65,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="mb-12 scroll-mt-14">
-          <h2 className="text-3xl font-semibold mb-4 gradient-text">
+        <section id="about" className="mb-8 sm:mb-12 scroll-mt-14">
+          <h2 className="text-2xl sm:text-3xl font-semibold mb-4 gradient-text">
             About Me
           </h2>
           <Card className="bg-card text-card-foreground">
@@ -106,8 +106,8 @@ export default function Home() {
           </Card>
         </section>
 
-        <section id="projects" className="mb-12 scroll-mt-14">
-          <h2 className="text-3xl font-semibold mb-4 gradient-text">
+        <section id="projects" className="mb-8 sm:mb-12 scroll-mt-14">
+          <h2 className="text-2xl sm:text-3xl font-semibold mb-4 gradient-text">
             Projects
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -133,11 +133,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="skills" className="mb-12 scroll-mt-14">
-          <h2 className="text-3xl font-semibold mb-4 gradient-text">Skills</h2>
+        <section id="skills" className="mb-8 sm:mb-12 scroll-mt-14">
+          <h2 className="text-2xl sm:text-3xl font-semibold mb-4 gradient-text">
+            Skills
+          </h2>
           <Card className="bg-card text-card-foreground">
             <CardContent className="pt-6">
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 <SkillCategory
                   title="Frontend"
                   skills={[
@@ -194,7 +196,7 @@ export default function Home() {
         </section>
 
         <section id="contact" className="scroll-mt-14">
-          <h2 className="text-3xl font-semibold mb-4 gradient-text">
+          <h2 className="text-2xl sm:text-3xl font-semibold mb-4 gradient-text">
             Get in Touch
           </h2>
           <Card className="bg-card text-card-foreground">
