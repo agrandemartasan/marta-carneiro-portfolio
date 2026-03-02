@@ -130,6 +130,13 @@ export default function Home() {
               ]}
               link="https://woo-fr.netlify.app/"
             />
+            <ProjectCard
+              title="Discover South Korea"
+              description="A multilingual travel and e-commerce platform built from original Figma designs, developed through a complete UX/UI design process. Features three sections — Discovery, Plan, and Shop — with bilingual (PT/EN) support, responsive design, and product filtering."
+              tags={["Next.js", "TypeScript", "Tailwind CSS", "next-intl"]}
+              link="https://south-korea-tourism.vercel.app/"
+              githubLink="https://github.com/agrandemartasan/south-korea-tourism"
+            />
           </div>
         </section>
 
@@ -195,6 +202,26 @@ export default function Home() {
           </Card>
         </section>
 
+        <section id="education" className="mb-8 sm:mb-12 scroll-mt-14">
+          <h2 className="text-2xl sm:text-3xl font-semibold mb-4 gradient-text">
+            Education
+          </h2>
+          <div className="flex flex-col gap-6">
+            <EducationCard
+              institution="Ironhack Portugal"
+              program="Web Development Bootcamp"
+              period="2022–2023"
+              description="Intensive full-stack web development bootcamp covering JavaScript, React, Node.js, Express, and MongoDB, with a focus on building real-world applications through project-based learning."
+            />
+            <EducationCard
+              institution="IEFP — Instituto do Emprego e Formação Profissional"
+              program="UX/UI Design"
+              period="2025–2026"
+              description="Comprehensive UX/UI design course covering the full design process — from user research and wireframing to prototyping and visual design in Figma. The capstone project, Discover South Korea, was later developed into a fully functional multilingual web application."
+            />
+          </div>
+        </section>
+
         <section id="contact" className="scroll-mt-14">
           <h2 className="text-2xl sm:text-3xl font-semibold mb-4 gradient-text">
             Get in Touch
@@ -246,26 +273,40 @@ function ProjectCard({
   title,
   description,
   tags,
-  link
+  link,
+  githubLink
 }: {
   title: string;
   description: string;
   tags: string[];
   link: string;
+  githubLink?: string;
 }) {
   return (
     <Card className="bg-card text-card-foreground">
       <CardHeader>
         <CardTitle className="flex items-center justify-between">
           {title}
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary hover:text-primary/80"
-          >
-            <ExternalLink className="h-4 w-4" />
-          </a>
+          <div className="flex items-center gap-2">
+            {githubLink && (
+              <a
+                href={githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:text-primary/80"
+              >
+                <Github className="h-4 w-4" />
+              </a>
+            )}
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:text-primary/80"
+            >
+              <ExternalLink className="h-4 w-4" />
+            </a>
+          </div>
         </CardTitle>
       </CardHeader>
       <CardContent>
@@ -281,6 +322,39 @@ function ProjectCard({
             </Badge>
           ))}
         </div>
+      </CardContent>
+    </Card>
+  );
+}
+
+function EducationCard({
+  institution,
+  program,
+  period,
+  description
+}: {
+  institution: string;
+  program: string;
+  period: string;
+  description: string;
+}) {
+  return (
+    <Card className="bg-card text-card-foreground">
+      <CardHeader>
+        <CardTitle className="flex items-start justify-between gap-4">
+          <div>
+            <span className="block">{institution}</span>
+            <span className="block text-base font-normal text-primary mt-1">
+              {program}
+            </span>
+          </div>
+          <span className="text-sm font-normal text-muted-foreground whitespace-nowrap">
+            {period}
+          </span>
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        <p className="text-muted-foreground">{description}</p>
       </CardContent>
     </Card>
   );
