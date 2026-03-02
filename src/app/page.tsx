@@ -1,5 +1,5 @@
-import { Button } from "../components/ui/button";
-import { Card, CardContent } from "../components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import { Github, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
 import profilePicture from "../../public/marta-profile.jpg";
@@ -7,6 +7,7 @@ import { ScrollToTopButton } from "@/components/scroll-to-top-button";
 import { ProjectCard } from "@/components/project-card";
 import { EducationCard } from "@/components/education-card";
 import { SkillCategory } from "@/components/skill-category";
+import { ExperienceCard } from "@/components/experience-card";
 
 export default function Home() {
   return (
@@ -29,7 +30,7 @@ export default function Home() {
           <h1 className="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4 gradient-text">
             Marta Carneiro
           </h1>
-          <p className="text-lg sm:text-xl mb-4 sm:mb-8 text-secondary-foreground">
+          <p className="text-lg sm:text-xl mb-4 sm:mb-8 text-muted-foreground">
             Web Developer | Anime Enthusiast | Gamer
           </p>
           <div className="flex space-x-4">
@@ -103,11 +104,32 @@ export default function Home() {
           </Card>
         </section>
 
+        <section id="experience" className="mb-8 sm:mb-12 scroll-mt-14">
+          <h2 className="text-2xl sm:text-3xl font-semibold mb-4 gradient-text">
+            Work Experience
+          </h2>
+          <div className="flex flex-col gap-6">
+            <ExperienceCard
+              company="Critical TechWorks"
+              role="Software Developer · Full-time"
+              period="Jun 2023 – Jun 2024"
+              description="Developed full-stack features with Java and Angular in a microservices architecture. Gained hands-on experience with unit, integration, and behaviour-driven testing. Actively contributed to Scrum practices — sprint reviews, backlog refinement, and retrospectives — and played a key role in defining the team's Git branching and release strategy, as well as contributing to backend and frontend architecture design."
+            />
+            <ExperienceCard
+              company="Arquivo Sonoro de Castro Marim"
+              role="Freelance Developer"
+              period="Feb 2023 – Jun 2023"
+              description="Developed a digital archive of nature and urban sounds recorded in and around Castro Marim, Algarve. Built for the Particular Universal project by OUT.RA cultural association and Câmara Municipal de Castro Marim."
+              link="https://arquivosonorocastromarim.pt/"
+            />
+          </div>
+        </section>
+
         <section id="projects" className="mb-8 sm:mb-12 scroll-mt-14">
           <h2 className="text-2xl sm:text-3xl font-semibold mb-4 gradient-text">
             Projects
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <ProjectCard
               title="Arquivo Sonoro Castro Marim"
               description="A digital platform that aims to preserve and share the soundscape of Castro Marim village located in the Algarve region of Portugal, and its surrounding natural areas. It features a collection of recorded sounds that is organized and indexed using a map with pins and a list of places, making it easy for users to explore and discover new sounds."
