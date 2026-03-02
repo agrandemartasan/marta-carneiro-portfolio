@@ -71,25 +71,27 @@ export default function Home() {
             <CardContent className="pt-6">
               <p className="mb-4">
                 Hello! I'm Marta Carneiro, a web developer based in Barreiro
-                with a unique background in customer service management and
-                technology. With a year of valuable experience at Critical
-                TechWorks, I've honed my skills in developing robust,
-                user-friendly applications and contributing to projects.
+                with a background that spans customer service management,
+                software development, and UX/UI design, which gives me a
+                distinctly user-centred perspective on building products.
               </p>
               <p className="mb-4">
-                My journey into web development began after a successful career
-                in customer service. This transition has allowed me to bring
-                strong communication skills and a user-centric approach to my
-                coding projects, creating a unique blend of technical expertise
-                and interpersonal abilities.
+                My journey into tech began with a transition from a career in
+                customer service, which sharpened my communication skills and
+                deepened my understanding of what users actually need. I went on
+                to complete my first contracted role as a developer at Critical
+                TechWorks, building full-stack features in a professional team
+                environment. That experience cemented both my technical
+                foundations and my appreciation for collaborative,
+                process-driven development.
               </p>
               <p className="mb-4">
-                I'm proficient in JavaScript, TypeScript, and modern frameworks
-                like React, Next.js and Angular 2. My backend experience
-                includes Node.js, Express, Java, Quarkus, and Maven. I'm also
-                experienced with CSS frameworks such as Tailwind CSS and
-                Bootstrap, which allow me to create responsive and visually
-                appealing user interfaces efficiently.
+                More recently I've been expanding into UX/UI design, going
+                through the full process of user research, wireframing,
+                prototyping, and visual design in Figma before writing a single
+                line of code. Having experience on both sides of the
+                design-to-development handoff has made me a more complete
+                developer.
               </p>
               <p>
                 When I'm not coding, you'll find me exploring virtual worlds
@@ -187,7 +189,8 @@ export default function Home() {
                     "Quarkus",
                     "Maven",
                     "MongoDB",
-                    "RESTful APIs"
+                    "RESTful APIs",
+                    "Microservices"
                   ]}
                 />
                 <SkillCategory
@@ -196,7 +199,7 @@ export default function Home() {
                 />
                 <SkillCategory
                   title="Tools & Others"
-                  skills={["Git", "npm", "JIRA", "Figma", "Confluence"]}
+                  skills={["Git", "npm", "JIRA", "Figma", "Confluence", "UX/UI Design"]}
                 />
                 <SkillCategory
                   title="Soft Skills"
@@ -212,7 +215,7 @@ export default function Home() {
                   title="Currently Learning"
                   skills={[
                     "Styled Components",
-                    "Microservices",
+                    "React Native",
                     "Cloud Technologies"
                   ]}
                 />
