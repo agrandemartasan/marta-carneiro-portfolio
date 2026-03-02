@@ -1,15 +1,12 @@
 import { Button } from "../components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle
-} from "../components/ui/card";
-import { Badge } from "../components/ui/badge";
-import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
+import { Card, CardContent } from "../components/ui/card";
+import { Github, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
 import profilePicture from "../../public/marta-profile.jpg";
 import { ScrollToTopButton } from "@/components/scroll-to-top-button";
+import { ProjectCard } from "@/components/project-card";
+import { EducationCard } from "@/components/education-card";
+import { SkillCategory } from "@/components/skill-category";
 
 export default function Home() {
   return (
@@ -23,8 +20,8 @@ export default function Home() {
             <Image
               src={profilePicture}
               alt="Marta Carneiro"
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }}
               className="rounded-full"
               priority
             />
@@ -235,7 +232,7 @@ export default function Home() {
               </p>
               <div className="flex flex-col space-y-2">
                 <a
-                  href="mailto:mlpsc@gmail.com"
+                  href="mailto:mlpscarneiro@gmail.com"
                   className="flex items-center space-x-2 text-[#8c7a5b] dark:text-[#d3c0a8] hover:underline"
                 >
                   <Mail className="h-4 w-4" />
@@ -266,109 +263,5 @@ export default function Home() {
       </div>
       <ScrollToTopButton />
     </main>
-  );
-}
-
-function ProjectCard({
-  title,
-  description,
-  tags,
-  link,
-  githubLink
-}: {
-  title: string;
-  description: string;
-  tags: string[];
-  link: string;
-  githubLink?: string;
-}) {
-  return (
-    <Card className="bg-card text-card-foreground">
-      <CardHeader>
-        <CardTitle className="flex items-center justify-between">
-          {title}
-          <div className="flex items-center gap-2">
-            {githubLink && (
-              <a
-                href={githubLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:text-primary/80"
-              >
-                <Github className="h-4 w-4" />
-              </a>
-            )}
-            <a
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:text-primary/80"
-            >
-              <ExternalLink className="h-4 w-4" />
-            </a>
-          </div>
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        <p className="text-muted-foreground">{description}</p>
-        <div className="flex flex-wrap gap-2 mt-4">
-          {tags.map((tag, index) => (
-            <Badge
-              key={index}
-              variant="secondary"
-              className="bg-secondary text-secondary-foreground"
-            >
-              {tag}
-            </Badge>
-          ))}
-        </div>
-      </CardContent>
-    </Card>
-  );
-}
-
-function EducationCard({
-  institution,
-  program,
-  period,
-  description
-}: {
-  institution: string;
-  program: string;
-  period: string;
-  description: string;
-}) {
-  return (
-    <Card className="bg-card text-card-foreground">
-      <CardHeader>
-        <CardTitle className="flex items-start justify-between gap-4">
-          <div>
-            <span className="block">{institution}</span>
-            <span className="block text-base font-normal text-primary mt-1">
-              {program}
-            </span>
-          </div>
-          <span className="text-sm font-normal text-muted-foreground whitespace-nowrap">
-            {period}
-          </span>
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        <p className="text-muted-foreground">{description}</p>
-      </CardContent>
-    </Card>
-  );
-}
-
-function SkillCategory({ title, skills }: { title: string; skills: string[] }) {
-  return (
-    <div>
-      <h3 className="font-semibold mb-2 text-primary">{title}</h3>
-      <ul className="list-disc list-inside text-muted-foreground">
-        {skills.map((skill, index) => (
-          <li key={index}>{skill}</li>
-        ))}
-      </ul>
-    </div>
   );
 }
