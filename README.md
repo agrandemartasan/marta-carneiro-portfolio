@@ -1,21 +1,25 @@
 # Marta Carneiro's Portfolio
 
-Hi there! Welcome to the repository for my personal portfolio website. I'm Marta, a web developer with a background in customer service and a passion for creating user-friendly applications. This project showcases my skills, projects, and a bit about who I am.
+Marta Carneiro is a web developer based in Barreiro with a background in full-stack development, UX/UI design, and customer service. This portfolio showcases her projects, experience, and skills.
+
+## Live Demo
+
+[marta-carneiro-portfolio.vercel.app](https://marta-carneiro-portfolio.vercel.app/)
 
 ## Tech Stack
 
-This portfolio is built with:
-
 - Next.js 15
+- React 19
 - TypeScript
 - Tailwind CSS
-- shadcn/ui components
+- shadcn/ui
 - Lucide React icons
+- next-themes
 
 ## Features
 
-- Responsive design that works well on various devices
-- Dark mode support
-- Scroll-to-top button for easy navigation
-- Sections for About Me, Projects, Skills, and Contact information
-- Integration with GitHub, LinkedIn, and email
+- Responsive design for all screen sizes
+- Light and dark mode
+- Sections for About Me, Work Experience, Projects, Skills, Education, and Contact
+- Scroll-to-top button
+- Links to GitHub, LinkedIn, and email
