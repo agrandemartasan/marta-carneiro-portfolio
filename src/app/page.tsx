@@ -149,14 +149,17 @@ export default function Home() {
                 "Chakra UI",
                 "Axios"
               ]}
-              link="https://woo-fr.netlify.app/"
+              githubLinks={[
+                { url: "https://github.com/agrandemartasan/woofr-client", label: "Client" },
+                { url: "https://github.com/agrandemartasan/woofr-server", label: "Server" }
+              ]}
             />
             <ProjectCard
               title="Discover South Korea"
               description="A multilingual travel and e-commerce platform built from original Figma designs, developed through a complete UX/UI design process. Features three sections — Discovery, Plan, and Shop — with bilingual (PT/EN) support, responsive design, and product filtering."
               tags={["Next.js", "TypeScript", "Tailwind CSS", "next-intl"]}
               link="https://south-korea-tourism.vercel.app/"
-              githubLink="https://github.com/agrandemartasan/south-korea-tourism"
+              githubLinks={[{ url: "https://github.com/agrandemartasan/south-korea-tourism" }]}
             />
           </div>
         </section>
@@ -232,13 +235,13 @@ export default function Home() {
             <EducationCard
               institution="Ironhack Portugal"
               program="Web Development Bootcamp"
-              period="2022–2023"
+              period="Sep 2022 – Mar 2023"
               description="Intensive full-stack web development bootcamp covering JavaScript, React, Node.js, Express, and MongoDB, with a focus on building real-world applications through project-based learning."
             />
             <EducationCard
               institution="IEFP — Instituto do Emprego e Formação Profissional"
               program="UX/UI Design"
-              period="2025–2026"
+              period="Sep 2025 – Jan 2026"
               description="Comprehensive UX/UI design course covering the full design process — from user research and wireframing to prototyping and visual design in Figma. The capstone project, Discover South Korea, was later developed into a fully functional multilingual web application."
             />
           </div>
